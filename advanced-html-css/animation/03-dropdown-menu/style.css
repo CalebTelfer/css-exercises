@@ -13,11 +13,12 @@
 }
 
 .dropdown-menu {
+  transform-origin: top;
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
+  animation: dropAnimation 2s ease-in-out forwards;
   display: none;
 }
 
@@ -29,4 +30,18 @@ ul.dropdown-menu li:hover {
   display: block;
 }
 
+@keyframes dropAnimation {
+  from {
+    transform: scaley(0%);
 
+  }
+
+  60% {
+    transform: scaley(110%);
+  }
+
+
+  to {
+    transform: scaley(100%);
+  }
+}
